@@ -1,2 +1,5 @@
 # AngularJS
-Angular JS
+
+
+DOC : https://docs.angularjs.org
+
