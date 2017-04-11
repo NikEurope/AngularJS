@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My AngularJS App</title>
+  </head>
+  <body ng-app>
+
+<!-- Test 0 -->
+<input type="text" ng-model="nb0"/>
+{{nb0 + " Salut !" }}<br /><br />
+
+
+<!-- Test 1 -->
+<input type="text" ng-model="nb1"/>
+{{nb1}}<br /><br />
+
+
+<!-- Test 2 -->
+<input type="text" ng-model="nb2"/>
+{{"Somme : " + (nb1 * nb2)}}<br /><br />
+
+
+<!-- Test 3 -->
+<div ng-init= "users=['Marc', 'Jean', 'John']">
+<ul>
+    <li ng-repeat="user in users">{{user}}
+    </li>
+</ul>
+</div>
+<br /><br />
+
+
+<!-- Test 4 Les Filtres -->
+<div ng-init= "users=['Marc', 'Jean', 'John']">
+<ul>
+    <li ng-repeat="user in users">{{user | uppercase}}  <!--  filtre uppercase -->
+    </li>
+</ul>
+</div>
+<br /><br />
+
+
+<!-- Test 5 Les Filtres : Donnes -->
+<div ng-init= "users=['Marc', 'Jean', 'John']">
+<ul>
+    <li ng-repeat="user in users">{{user | uppercase}}  <!--  filtre uppercase -->
+    </li>
+</ul>
+{{users | filter:'J'}}
+</div>
+<br /><br />
+
+
+
+
+
+
+<!-- Test 6 Les Filtres : Selection et Organisation -->
+<!-- <input type="text" ng-model="query"/>
+<select ng-model="order">
+<option value="username">Organiser par nom</option>
+<option value="content">Organiser par contenu</option>
+</select>
+
+<div ng-init= "users=[{username:'Marc', content:'Salut'},
+{username:'Jean', content: 'Je suis La !'},
+{username:'John', content: 'First'}]">
+    <div ng-repeat="user in users | filter:{content:query} | orderBy:order">
+        <p>
+            <strong>{{user.username}}</strong><br>
+            {{user.content}}
+        </p>
+    </div>
+</div>
+<br /><br /> -->
+
+
+
+
+
+
+
+<!-- Angular ----------------- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+  </body>
+</html>
