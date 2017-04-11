@@ -11,8 +11,5 @@ Développez vos applications web avec AngularJS https://openclassrooms.com/cours
 
 
 
-BASE : 
-
-https://www.youtube.com/watch?v=aBE0St5yI7U&index=1&list=PLjwdMgw5TTLUDlJyx4yIPQjoI-w-7Zs1r
 
 
