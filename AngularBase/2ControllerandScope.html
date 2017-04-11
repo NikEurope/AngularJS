@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My AngularJS - Scope</title>
+  </head>
+  <body ng-app>
+
+<!-- Scope - liaison entre controller et Vue en Angular JS-->
+
+<input type="text" ng-model="query"/>
+<select ng-model="order">
+<option value="username">Organiser par nom</option>
+<option value="content">Organiser par contenu</option>
+</select>
+
+<div ng-controller="CommentsCtrl">
+    <div ng-repeat="comment in comments | filter:{content: query} | orderBy:order">
+        <p>
+            <strong>{{comment.username}}</strong><br>
+            {{comment.content}}
+        </p>
+    </div>
+</div>
+
+
+
+<!-- Angular ----------------- -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<script type="text/javascript">
+
+function CommentsCtrl($scope){
+  $scope.comments = [
+     {
+    "name": "Marisa",
+    "email": "marisabarron@obliq.com"
+  },
+  {
+    "name": "William",
+    "email": "williambarron@obliq.com"
+  },
+  {
+    "name": "Hernandez",
+    "email": "hernandezbarron@obliq.com"
+  },
+  {
+    "name": "Hopper",
+    "email": "hopperbarron@obliq.com"
+  },
+  {
+    "name": "Beasley",
+    "email": "beasleybarron@obliq.com"
+  },
+  {
+    "name": "Helen",
+    "email": "helenbarron@obliq.com"
+  },
+  {
+    "name": "Gena",
+    "email": "genabarron@obliq.com"
+  }
+  ];
+
+}
+
+</script>
+
+  </body>
+</html>
